@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="script.js"> </script>
+</head>
+<style>
+    .main{
+        background-color:white;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        width: 50%;
+    }
+    h1 {
+        color: rgb(255, 255, 255);
+        font-family: 'Times New Roman', Times, serif;
+        padding: 30px;
+        background-color: #e60000;
+        width: 100%;
+    }
+
+    body {
+        background-color:rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .button {
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        align-self: center;
+       
+        }
+    
+</style>
+<body>
+
+    <h1 align="center">Student Registration Form</h1>
+    <div class="main">
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <p>
+            <label for="roll_no">Roll no. :</label>
+            <input type="text" id="roll_no" name="roll_no">
+        </p>
+
+        <p>
+            <label>Student name :</label>
+            <input type="text" placeholder="First Name" name="first_name">
+            <input type="text" placeholder="Last Name" name="last_name">
+        </p>
+
+        <p>
+            <label for="father_name">Father's name :</label>
+            <input type="text" id="father_name" name="father_name">
+        </p>
+
+        <p>
+            <label>Date of birth :</label>
+            <input type="text" placeholder="Day" name="day" maxlength="2" size="4"> -
+            <input type="text" placeholder="Month" name="month" maxlength="2" size="4"> -
+            <input type="text" placeholder="Year" name="year" maxlength="4" size="6"> (DD-MM-YYYY)
+        </p>
+
+        <p>
+            <label for="mobile_no">Mobile no. :</label>
+            <input type="tel" id="mobile_no" name="mobile_no" value="+91">
+        </p>
+
+        <p>
+            <label for="email_id">Email id :</label>
+            <input type="email" id="email_id" name="email_id">
+        </p>
+
+        <p>
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="password">
+        </p>
+
+        <p>
+            Gender :
+            <input type="radio" id="gender_male" name="gender" value="male">
+            <label for="gender_male">Male</label>
+            <input type="radio" id="gender_female" name="gender" value="female">
+            <label for="gender_female">Female</label>
+        </p>
+
+        <p>
+            Department :
+            <input type="checkbox" id="dept_cse" name="department" value="cse">
+            <label for="dept_cse">CSE</label>
+            <input type="checkbox" id="dept_it" name="department" value="it">
+            <label for="dept_it">IT</label>
+            <input type="checkbox" id="dept_ece" name="department" value="ece">
+            <label for="dept_ece">ECE</label>
+            <input type="checkbox" id="dept_civil" name="department" value="civil">
+            <label for="dept_civil">Civil</label>
+            <input type="checkbox" id="dept_mech" name="department" value="mech">
+            <label for="dept_mech">Mech</label>
+        </p>
+
+        <p>
+            <label for="course">Course :</label>
+            <select id="course" name="course">
+                <option value="">Select Current Course's</option>
+                <option value="btech_cse">B.Tech (CSE)</option>
+                <option value="btech_it">B.Tech (IT)</option>
+                <option value="mtech_cse">M.Tech (CSE)</option>
+                <option value="phd_it">Ph.D. (IT)</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="student_photo">Student photo :</label>
+            <input type="file" id="student_photo" name="student_photo">
+        </p>
+
+        <p>
+            <label for="city">City :</label>
+            <input type="text" id="city" name="city">
+        </p>
+
+        <p>
+            <label for="address">Address :</label>
+            <textarea id="address" name="address" rows="4" cols="50"></textarea>
+        </p>
+
+        <p>
+            <div class="body">
+            <button type="submit" class="button">Register</button>
+           </div>
+        </p>
+
+    </form>
+    </div>
+
+</body>
+</html>
