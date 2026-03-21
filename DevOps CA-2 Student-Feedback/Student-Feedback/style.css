@@ -1,0 +1,132 @@
+/* Background Gradient */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+}
+
+/* Center Form */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Card Design */
+.form-card {
+    background: #fff;
+    padding: 30px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Floating Input Style */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* Labels */
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #999;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Floating Effect */
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label,
+.form-group select:focus + label {
+    top: -10px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+/* Gender */
+.gender-box {
+    margin: 15px 0;
+}
+
+.gender-box p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.gender-box label {
+    margin-right: 15px;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    width: 48%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.submit {
+    background: #667eea;
+    color: white;
+}
+
+/* Reset Button */
+.reset {
+    background: #ddd;
+}
+
+/* Hover Effects */
+.submit:hover {
+    background: #5a67d8;
+}
+
+.reset:hover {
+    background: #bbb;
+}
+
+/* Error Message */
+#error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

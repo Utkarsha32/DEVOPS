@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="form-wrapper">
+    <form id="feedbackForm" class="form-card">
+        
+        <h1>Feedback Form</h1>
+        <p class="subtitle">We value your feedback</p>
+
+        <div class="form-group">
+            <input type="text" id="name" required>
+            <label>Student Name</label>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="email" required>
+            <label>Email Address</label>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="mobile" required>
+            <label>Mobile Number</label>
+        </div>
+
+        <div class="form-group">
+            <select id="department" required>
+                <option value="" disabled selected></option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+                <option>ME</option>
+            </select>
+            <label>Department</label>
+        </div>
+
+        <div class="gender-box">
+            <p>Gender</p>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+
+        <div class="form-group">
+            <textarea id="feedback" rows="3"></textarea>
+            <label>Feedback</label>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn submit">Submit</button>
+            <button type="reset" class="btn reset">Reset</button>
+        </div>
+
+        <p id="error"></p>
+
+    </form>
+</div>
+
+</body>
+</html>
