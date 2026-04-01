@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Utkarsha32/DEVOPS.git'
+            }
+        }
+
+        stage('Run Selenium Test') {
+            steps {
+                bat 'cd DevOps CA-2 Student-Feedback/Student-Feedback && pip install selenium'
+                bat 'cd DevOps CA-2 Student-Feedback/Student-Feedback && python selenium_test.py'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build Successful'
+        }
+        failure {
+            echo 'Build Failed'
+        }
+    }
+}
